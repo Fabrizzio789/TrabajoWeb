@@ -1,0 +1,52 @@
+/* BODY */
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* NAVBAR */
+.navbar{
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* TÍTULOS */
+h1{
+    color: #198754;
+}
+
+/* TARJETAS */
+.card{
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+/* BOTONES */
+.btn-success{
+    background-color: #198754;
+    border: none;
+}
+
+.btn-success:hover{
+    background-color: #157347;
+}
+
+/* TABLAS */
+.table{
+    background-color: white;
+}
+
+/* FOOTER */
+footer{
+    margin-top: 40px;
+}
+
+/* FORMULARIOS */
+.form-control:focus,
+.form-select:focus{
+    border-color: #198754;
+    box-shadow: 0 0 5px rgba(25,135,84,0.5);
+}
