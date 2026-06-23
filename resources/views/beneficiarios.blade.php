@@ -11,7 +11,9 @@
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    @vite(['resources/css/styles.css', 'resources/js/script.js'])
+    <link rel="stylesheet" href="{{ asset('styles.css') }}">
+
+    <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
 </head>
 
 <body class="bg-light">
@@ -22,7 +24,7 @@
         <div class="container-fluid">
 
             <a class="navbar-brand" href="/dashboard">
-                Sistema de Comedores Populares
+                NutriGest
             </a>
 
             <button 
@@ -82,11 +84,11 @@
         <!-- TITULO -->
         <div class="mb-4">
 
-            <h2 class="fw-bold">
+            <h2 class="page-title">
                 Gestión de Beneficiarios
             </h2>
 
-            <p class="text-muted">
+            <p class="page-subtitle">
                 Registro y control de familias beneficiadas
             </p>
 

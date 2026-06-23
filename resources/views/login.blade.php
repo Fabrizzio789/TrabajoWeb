@@ -6,16 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login - Sistema de Comedores Populares</title>
+    <title>Login - NutriGest</title>
 
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    @vite(['resources/css/styles.css', 'resources/js/script.js'])
+    <link rel="stylesheet" href="{{ asset('styles.css') }}">
+
+    <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
 
 </head>
 
-<body class="bg-light">
+<body class="login-page">
 
     <!-- CONTENEDOR PRINCIPAL -->
     <div class="container">
@@ -25,17 +27,17 @@
             <div class="col-md-5">
 
                 <!-- TARJETA LOGIN -->
-                <div class="card shadow-lg border-0">
+                <div class="card shadow-lg border-0 login-card">
 
                     <!-- HEADER -->
                     <div class="card-header bg-success text-white text-center p-4">
 
                         <h2 class="text-white fw-bold">
-                            Sistema de Gestión
+                            NutriGest
                         </h2>
 
                         <p class="mb-0">
-                            Comedores Populares
+                            Sistema Inteligente para Comedores Populares
                         </p>
 
                     </div>
@@ -43,8 +45,20 @@
                     <!-- BODY -->
                     <div class="card-body p-4">
 
+                    <!-- MENSAJE DE ERROR -->
+                        @if(session('error'))
+
+                            <div class="alert alert-danger">
+
+                                {{ session('error') }}
+
+                            </div>
+
+                        @endif
+
                         <!-- FORMULARIO -->
-                        <form id="formLogin">
+                        <form method="POST" action="/login">
+                            @csrf
 
                             <!-- CORREO -->
                             <div class="mb-3">
@@ -57,6 +71,7 @@
                                     type="email"
                                     class="form-control"
                                     id="correo"
+                                    name="correo"
                                     placeholder="Ingrese su correo"
                                     required
                                 >
@@ -74,6 +89,7 @@
                                     type="password"
                                     class="form-control"
                                     id="password"
+                                    name="password"
                                     placeholder="Ingrese su contraseña"
                                     required
                                 >
@@ -98,11 +114,22 @@
                            <!-- BOTÓN -->
 <div class="d-grid">
 
-    <a href="/dashboard" class="btn btn-success btn-lg">
-        Iniciar Sesión
-    </a>
+    <button type="submit" class="btn btn-success btn-lg">
+    Iniciar Sesión
+</button>
 
 </div>
+
+<!-- ENLACE REGISTRO -->
+<p class="text-center mt-3">
+
+    ¿No tienes cuenta?
+
+    <a href="/registro">
+        Regístrate aquí
+    </a>
+
+</p>
 
                         </form>
 
@@ -112,7 +139,7 @@
                     <div class="card-footer text-center">
 
                         <small class="text-muted">
-                            © 2026 Sistema de Gestión de Comedores Populares
+                            © 2026 Sistema Inteligente para Comedores Populares
                         </small>
 
                     </div>

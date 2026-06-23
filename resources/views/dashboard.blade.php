@@ -8,7 +8,9 @@
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    @vite(['resources/css/styles.css', 'resources/js/script.js'])
+    <link rel="stylesheet" href="{{ asset('styles.css') }}">
+
+    <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
 
 </head>
 
@@ -20,7 +22,7 @@
         <div class="container-fluid">
 
             <a class="navbar-brand" href="/dashboard">
-                Sistema de Comedores Populares
+                NutriGest
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -74,13 +76,13 @@
 
         <div class="text-center mb-5">
 
-            <h1 class="fw-bold">
-                Bienvenido al Sistema de Gestión
-            </h1>
+            <h1 class="hero-title">
+    Bienvenido a NutriGest
+</h1>
 
-            <p class="text-muted">
-                Plataforma para la administración de comedores populares
-            </p>
+<p class="hero-subtitle">
+    Sistema Inteligente para Comedores Populares
+</p>
 
         </div>
 

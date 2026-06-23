@@ -32,3 +32,23 @@ Route::delete('/beneficiarios/{id}', [BeneficiarioController::class, 'destroy'])
 
 Route::delete('/inventario/{id}', [InventarioController::class, 'destroy']);
 Route::put('/inventario/{id}', [InventarioController::class, 'update']);
+
+use App\Http\Controllers\AuthController;
+
+Route::get('/', function () {
+    return view('login');
+});
+
+Route::get('/registro', function () {
+    return view('registro');
+});
+
+Route::post('/registrar',
+    [AuthController::class, 'registrar']);
+
+Route::post('/login',
+    [AuthController::class, 'login']);
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});

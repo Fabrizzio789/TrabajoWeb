@@ -1,0 +1,189 @@
+/* BODY */
+body{
+    font-family: Arial, sans-serif;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url('/img/comedores.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar{
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+
+/* TARJETAS */
+.card{
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+/* BOTONES */
+.btn-success{
+    background-color: #198754;
+    border: none;
+}
+
+.btn-success:hover{
+    background-color: #157347;
+}
+
+/* TABLAS */
+.table{
+    background-color: white;
+}
+
+/* FOOTER */
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* FORMULARIOS */
+.form-control:focus,
+.form-select:focus{
+    border-color: #198754;
+    box-shadow: 0 0 5px rgba(25,135,84,0.5);
+}
+
+/* LOGIN */
+.login-page{
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url('/img/comedores.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+.login-card{
+
+    background: rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(8px);
+
+    border-radius: 15px;
+
+}
+
+.login-card{
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.card-header{
+    font-size: 1.1rem;
+}
+
+.form-control{
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.btn-success{
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.card-footer a{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card-footer a:hover{
+    text-decoration: underline;
+}
+
+/* ENLACES LOGIN Y REGISTRO */
+.card-footer a,
+.text-center a{
+    color: #198754;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card-footer a:hover,
+.text-center a:hover{
+    color: #146c43;
+    text-decoration: underline;
+}
+
+/* TITULO DASHBOARD */
+.hero-title{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+}
+
+.hero-subtitle{
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.card{
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+
+.btn-success{
+    background-color: #198754 !important;
+    border: none;
+    color: #ffffff !important;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.btn-success:hover{
+    background-color: #157347 !important;
+    color: #ffffff !important;
+}
+
+/* TITULOS SOBRE IMAGEN DE FONDO */
+.page-title{
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.page-subtitle{
+    color: #f8f9fa;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+}
+
+/* CONTENEDORES SOBRE FONDO */
+.content-box{
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
