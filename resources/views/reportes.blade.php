@@ -264,12 +264,12 @@
 
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER
     <footer class="bg-dark text-white text-center p-3 mt-5">
 
         Sistema de Gestión de Comedores Populares © 2026
 
-    </footer>
+    </footer>-->
 
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

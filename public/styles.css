@@ -50,11 +50,7 @@ body{
 
 /* FOOTER */
 footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    margin-top: 40px;
 }
 
 /* FORMULARIOS */
@@ -186,4 +182,22 @@ footer{
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal{
+    overflow: visible !important;
+}
+
+.modal-dialog{
+    overflow: visible !important;
+}
+
+.modal-content{
+    overflow: visible !important;
+}
+
+.card,
+.card-body,
+.table-responsive{
+    overflow: visible !important;
 }
