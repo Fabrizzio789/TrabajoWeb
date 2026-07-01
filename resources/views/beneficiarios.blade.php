@@ -94,7 +94,6 @@
                 <table class="table table-bordered table-hover align-middle">
                     <thead class="table-success">
                         <tr>
-                            <th>ID</th>
                             <th>Nombres</th>
                             <th>DNI</th>
                             <th>Teléfono</th>
@@ -105,7 +104,6 @@
                     <tbody>
                         @foreach(($beneficiarios ?? []) as $b)
                         <tr>
-                            <td>{{ $b->id }}</td>
                             <td>{{ $b->nombres }} {{ $b->apellidos }}</td>
                             <td>{{ $b->dni }}</td>
                             <td>{{ $b->telefono }}</td>

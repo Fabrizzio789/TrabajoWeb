@@ -99,7 +99,6 @@
                 <table class="table table-bordered table-hover align-middle">
                     <thead class="table-success">
                         <tr>
-                            <th>ID</th>
                             <th>Producto</th>
                             <th>Categoría</th>
                             <th>Stock</th>
@@ -111,7 +110,6 @@
                     <tbody>
                         @foreach(($inventarios ?? []) as $i)
                         <tr>
-                            <td>{{ $i->id }}</td>
                             <td>{{ $i->producto }}</td>
                             <td>{{ $i->categoria }}</td>
                             <td>{{ $i->stock }}</td>

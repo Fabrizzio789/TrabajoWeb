@@ -20,9 +20,8 @@ use App\Http\Controllers\InventarioController;
 Route::get('/inventario', [InventarioController::class, 'index']);
 Route::post('/inventario', [InventarioController::class, 'store']);
 
-Route::get('/reportes', function () {
-    return view('reportes');
-});
+use App\Http\Controllers\ReporteController;
+Route::get('/reportes', [ReporteController::class, 'index']);
 
 Route::get('/beneficiarios', [BeneficiarioController::class, 'index']);
 Route::post('/beneficiarios', [BeneficiarioController::class, 'store']);

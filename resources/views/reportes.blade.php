@@ -109,8 +109,8 @@
                         </h5>
 
                         <h2 class="text-success fw-bold" id="totalBeneficiarios">
-                            0
-                        </h2>
+                        {{ $totalBeneficiarios }}
+                    </h2>
 
                         <p class="text-muted">
                             Familias registradas
@@ -134,7 +134,7 @@
                         </h5>
 
                         <h2 class="text-primary fw-bold" id="totalProductos">
-                            0
+                            {{ $totalProductos }}
                         </h2>
 
                         <p class="text-muted">
@@ -159,7 +159,7 @@
                         </h5>
 
                         <h2 class="text-warning fw-bold" id="totalRaciones">
-                            0
+                            {{ $totalRaciones ?? 0 }}
                         </h2>
 
                         <p class="text-muted">
@@ -184,7 +184,7 @@
                         </h5>
 
                         <h2 class="text-danger fw-bold" id="stockBajo">
-                            0
+                            {{ $stockBajo }}
                         </h2>
 
                         <p class="text-muted">
@@ -274,98 +274,6 @@
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- SCRIPT -->
-    <script>
-
-        // ======================================
-        // OBTENER DATOS
-        // ======================================
-
-        let beneficiarios =
-            JSON.parse(localStorage.getItem("beneficiarios")) || [];
-
-        let productos =
-            JSON.parse(localStorage.getItem("productos")) || [];
-
-
-
-        // ======================================
-        // TOTAL BENEFICIARIOS
-        // ======================================
-
-        document.getElementById("totalBeneficiarios").innerText =
-            beneficiarios.length;
-
-
-
-        // ======================================
-        // TOTAL PRODUCTOS
-        // ======================================
-
-        document.getElementById("totalProductos").innerText =
-            productos.length;
-
-
-
-        // ======================================
-        // STOCK BAJO
-        // ======================================
-
-        let stockBajo = productos.filter(
-
-            producto => producto.estado === "Stock Bajo"
-
-        );
-
-        document.getElementById("stockBajo").innerText =
-            stockBajo.length;
-
-
-
-        // ======================================
-        // RACIONES AUTOMÁTICAS
-        // ======================================
-
-        let totalRaciones = beneficiarios.length * 2;
-
-        document.getElementById("totalRaciones").innerText =
-            totalRaciones;
-
-
-
-        // ======================================
-        // TABLA DINÁMICA
-        // ======================================
-
-        let tabla = document.getElementById("tablaReportes");
-
-        let fechaActual = new Date().toLocaleDateString();
-
-        let observacion = "Atención normal";
-
-        if(beneficiarios.length > 10){
-
-            observacion = "Alta demanda";
-
-        }
-
-        tabla.innerHTML += `
-
-            <tr>
-
-                <td>${fechaActual}</td>
-
-                <td>${beneficiarios.length}</td>
-
-                <td>${totalRaciones}</td>
-
-                <td>${observacion}</td>
-
-            </tr>
-
-        `;
-
-    </script>
 
 </body>
 
