@@ -58,6 +58,8 @@
                         </a>
                     </li>
 
+                    <li class="nav-item"><a class="nav-link" href="/raciones">Raciones</a></li>
+
                     <li class="nav-item">
                         <a class="nav-link active" href="/reportes">
                             Reportes
@@ -217,44 +219,46 @@
                         <tr>
 
                             <th>Fecha</th>
-                            <th>Beneficiarios Atendidos</th>
-                            <th>Raciones Entregadas</th>
+                            <th>Beneficiario</th>
+                            <th>Cantidad</th>
                             <th>Observaciones</th>
 
                         </tr>
 
                     </thead>
 
-                    <tbody id="tablaReportes">
+                    <tbody>
 
-                        <tr>
+@forelse($reportes as $reporte)
 
-                            <td>14/05/2026</td>
-                            <td>110</td>
-                            <td>280</td>
-                            <td>Atención normal</td>
+<tr>
 
-                        </tr>
+    <td>{{ $reporte->fecha }}</td>
 
-                        <tr>
+    <td>
+        {{ $reporte->beneficiario->nombres }}
+        {{ $reporte->beneficiario->apellidos }}
+    </td>
 
-                            <td>15/05/2026</td>
-                            <td>120</td>
-                            <td>300</td>
-                            <td>Alta demanda</td>
+    <td>{{ $reporte->cantidad }}</td>
 
-                        </tr>
+    <td>Entrega registrada</td>
 
-                        <tr>
+</tr>
 
-                            <td>16/05/2026</td>
-                            <td>115</td>
-                            <td>290</td>
-                            <td>Sin incidencias</td>
+@empty
 
-                        </tr>
+<tr>
 
-                    </tbody>
+    <td colspan="4" class="text-center">
+        No hay entregas registradas.
+    </td>
+
+</tr>
+
+@endforelse
+
+</tbody>
 
                 </table>
 

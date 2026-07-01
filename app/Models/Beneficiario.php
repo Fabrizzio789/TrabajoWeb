@@ -15,4 +15,10 @@ class Beneficiario extends Model
         'telefono',
         'direccion'
     ];
+
+    public function raciones()
+    {
+        return $this->hasMany(Racion::class);
+    }
 }
+

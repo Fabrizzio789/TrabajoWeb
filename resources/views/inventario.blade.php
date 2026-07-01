@@ -23,7 +23,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="/dashboard">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="/beneficiarios">Beneficiarios</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/inventario">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/inventario">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/raciones">Raciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="/reportes">Reportes</a></li>
                     <li class="nav-item"><a class="nav-link text-warning" href="/login">Cerrar Sesión</a></li>
                 </ul>

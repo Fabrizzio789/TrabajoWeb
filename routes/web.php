@@ -51,3 +51,8 @@ Route::post('/login',
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+use App\Http\Controllers\RacionController;
+
+Route::get('/raciones', [RacionController::class, 'index']);
+Route::post('/raciones', [RacionController::class, 'store']);
